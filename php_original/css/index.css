@@ -1,0 +1,432 @@
+@charset "UTF-8";
+
+/*---Reset---*/
+body, h1, h2, h3, h4, h5, h6, p, address,
+ul, ol, li, dl, dt, dd, img, form, table, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: none;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 100%;
+	text-align: left;
+	list-style-type: none;
+	border-collapse: collapse;
+	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+}
+
+textarea { font-size: 100%; vertical-align:middle;}
+img { border-style: none; display: block; }
+hr { display: none; }
+em {font-style: normal}
+input {line-height:auto;vertical-align:middle;}
+strong.more {color:#c30}
+a {text-decoration: none;}
+li {text-decoration: none;}
+
+html {
+}
+
+body {
+	font-family:'Century Gothic','游ゴシック体', YuGothic, '游ゴシック', 'Yu Gothic','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
+	width: 100%;
+}
+
+/*クラス定義*/
+
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*--- entry.php ---*/
+.app_title {
+	background-color: #FCEDAA;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+.app_title p {
+	font-size: 40px;
+	width: 100%;
+	text-align: center;
+}
+.entry_form {
+	margin-bottom: 20px;
+}
+.entry_form_title {
+	font-weight: bold;
+	border-bottom: solid 1px #FCEDAA;
+	border-left: solid 10px #FCEDAA;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+.entry {
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+.entry_list {
+	margin-bottom: 10px;
+}
+
+
+/*--- recipe_folder.php ---*/
+.folder_wrapper {
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 50px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.folder_wrapper form {
+	width:  45%;
+	height: 130px;
+	margin: 0 auto;
+	margin-bottom: 5vh;
+	border: 1px solid;
+}
+.folder input {
+	width: 100%;
+	height: 130px;
+	font-size: 4vw;
+}
+.folder_plus input {
+	/*border: 0px;
+	width: 50px;
+	height: 50px;*/
+	/*background: url(../img/プラスのアイコン素材中.png) left top no-repeat;*/
+	/*margin-left: 11vw;*/
+	width: 100%;
+	height: 130px;
+	font-size: 4vw;
+}
+.folder_edit {
+	width: 70%;
+	margin: 0 auto;
+}
+.folder_edit ul {
+	margin-top: 30px;
+}
+.folder_edit li {
+	display: flex;
+	margin-bottom: 10px;
+}
+.folder_edit li input {
+	margin-left: 10px;
+	border: 0px;
+	border-bottom: solid 1px rgb(186, 186, 186);
+	font-size: 3.5vw;
+}
+.folder_edit_plus input {
+	border: 0px;
+	width: 35px;
+	height: 35px;
+	background: url(../img/プラスのアイコン素材小.png) left top no-repeat;
+}
+.folder_register input {
+	width: 100px;
+	border-radius: 70px;
+	background-color: #FCEDAA;
+}
+
+
+/*--- recipe_list.php ---*/
+.recipe_list {
+	width: 90vw;
+	display: flex;
+	margin: 0 auto;
+	margin-bottom: 50px;
+}
+.list_photo_img {
+	display: inline-block;
+	width: 100%;
+	height: 200px;
+}
+.list_photo_img_none {
+	height: 200px;
+	border: solid 1px #BBB;
+	background-image: url(../img/IMG_0088.PNG);
+	background-size: cover;
+}
+.list_photo {
+	width: 50%;
+}
+.list_contents {
+	margin-left: 3%;
+}
+.list_name {
+	font-size: 4.3vw;
+}
+.list_contents {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.list_contents input {
+	font-size: 2vw;
+	/*margin-top: 5px;*/
+}
+.list_comment {
+	position: relative;
+	display: inline-block;
+	margin: 1.0em 0 1.5em 8px;
+	padding: 7px 10px;
+	min-width: 120px;
+	max-width: 100%;
+	height: 100px;
+	color: #555;
+	font-size: 16px;
+	background: #FCEDAA;
+}
+.list_comment:before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: -30px;
+	margin-top: -15px;
+	border: 15px solid transparent;
+	border-right: 15px solid #FCEDAA;
+ }
+ .list_comment p {
+ 	margin: 0;
+ 	padding: 0;
+ }
+.plus img {
+	width: 10vw;
+	position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 15px;
+    margin-bottom: 150px;
+}
+#list_tab {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    margin-bottom: 150px;
+}
+.tab {
+	writing-mode: vertical-rl;
+	text-orientation: sideways;
+	display: inline-block;
+	height: 100px;
+	padding: 6px;
+	background:
+	linear-gradient(-135deg, transparent 15px, #FCEDAA 0) top right,
+	linear-gradient(-45deg, transparent 15px, #FCEDAA 0) bottom right;
+	background-size: 100% 50%;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+
+/*--- recipe.php ---*/
+.main_recipe_name {
+	position: fixed;
+    top: 0;
+    margin-top: 4vw;
+    margin-left: 14vw;
+    font-size: 4vw;
+}
+.tweet_under {
+	display: flex;
+	width: 70%;
+	margin: 0 auto;
+	margin-bottom: 2%;
+}
+.recipe_tab {
+	margin: 0 auto; 
+}
+.recipe_tab p {
+	font-size: 2vw;
+}
+.recipe_comment {
+	width: 70%;
+	height: 200px;
+	margin: 0 auto;
+	margin-bottom: 2vh;
+}
+.recipe_edit_menu {
+	display: flex;
+	width: 70%;
+	margin: 0 auto;
+}
+.recipe_edit {
+	margin: 0 auto;
+}
+.recipe_edit a {
+	display: inline-block;
+	width: 150px;
+	height: 50px;
+	border-radius: 70px;
+	font-size: 20px;
+	background-color: #FCEDAA;
+	text-align: center;
+	padding: 10px;
+	color: black;
+
+}
+.recipe_edit input {
+	width: 150px;
+	height: 50px;
+	border: none;
+	border-radius: 70px;
+	font-size: 20px;
+	background-color: #FCEDAA;
+}
+.recipe_cook a {
+	width: 180px;
+}
+.recipe_photo_img_none {
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	height: 300px;
+	border: solid 1px #BBB;
+	background-image: url(../img/IMG_0088.PNG);
+	background-size: cover;
+}
+/* for modern brouser */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+/* IE7,MacIE5 */
+.clearfix {
+  display: inline-block;
+}
+/* WinIE6 below, Exclude MacIE5 \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+.recipe_twetter {
+	float: none;
+	/*height: 300px;*/
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+
+/*--- recipe_add ---*/
+td {
+	padding: 30px;
+}
+textarea {
+	width: 90%;
+	height: 150px;
+}
+
+/*--- user_top.php ---*/
+.user_top table {
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
+/*--- nav.php ---*/
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #fff;
+	padding: 0 5%;
+
+}
+footer ul {
+	display: flex;
+	/*justify-content: center;*/
+	width: 100%;
+	margin: 0 auto;
+}
+footer li {
+	width: 25%;
+}
+footer li img {
+	width: 80%;
+	margin: 0 auto;
+}
+footer p {
+	text-align: center;
+}
+
+
+/*--- 共通 ---*/
+.main_wrapper {
+	width: 90%;
+	margin: 0 auto;
+	/*width: 100%;*/
+	margin-top: 10vh; 
+	margin-bottom: 30vh;
+}
+.circle {
+	width: 30px;
+	height: 30px;
+	background: #FCEDAA;
+	border: 1px solid #FCEDAA;
+	border-radius: 70px;
+	/*margin: 0 auto;*/
+}
+.circle_grey {
+	width: 30px;
+	height: 30px;
+	background: #BBB;
+	border: 1px solid #BBB;
+	border-radius: 70px;
+	/*margin: 0 auto;*/
+}
+.back img {
+	width: 10vw;
+}
+.back {
+	position: fixed;
+    top: 0;
+    margin: 2vw;
+}
+.complete img {
+	width: 100%;
+}
+.complete p {
+	width: 100%;
+	font-size: 30px;
+	text-align: center;
+}
+
+
+
+@media screen and (max-width: 1140px) {
+.wrapper {
+	width: 768px;
+	margin: 0 auto;
+}
+}
+
+/*--- レスポンシブ ---*/
+@media screen and (max-width: 768px) {
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
